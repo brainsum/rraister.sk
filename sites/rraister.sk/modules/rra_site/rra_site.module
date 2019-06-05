@@ -1,0 +1,25 @@
+<?php
+
+function rra_site_form_alter(&$form, &$form_state, $form_id) {
+  if($form_id=='simplenews_block_form_1'){
+    //dsm($form);
+    $form['mail']['#title'] = '';
+    $form['mail']['#default_value'] = t('E-mail') .'...';
+    $form['mail']['#attributes']['onblur'] = "if(this.value=='') this.value='". t('E-mail') ."...';";
+    $form['mail']['#attributes']['onfocus'] = "if(this.value=='". t('E-mail') ."...') this.value='';";
+    $form['submit']['#value'] = 'OK';
+  }
+  if($form_id=='simplenews_node_tab_send_form'){
+    $form['#submit'][] = 'rra_site_simplenews_send_submit';    
+  }
+}
+
+function rra_site_simplenews_send_submit($form, &$form_state){
+  if(module_exists('simplenews') and $form_state['values']['simplenews']['send']==1){
+    simplenews_cron();
+  }
+}
+
+
+ 
+?>

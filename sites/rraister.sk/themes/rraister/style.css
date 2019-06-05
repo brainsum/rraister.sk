@@ -1,0 +1,796 @@
+/*  Default css for drupal 7
+ *  code by: Brainsum s.r.o.
+ *  author: zbombicz
+ *  project: ---
+ *  date: 2011.04
+ *  INFO: Before modifying, adding new definitions reed all comments
+ *  HELP: Blocks could be find easier by searching for its region:
+ *  -- HEADER REGION -- , -- CONTENT REGION -- , -- RIGHT-SIDEBAR REGION -- , -- LEFT-SIDEBAR REGION -- ,
+ *  -- FOOTER REGION --
+ */
+
+
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @START ------------------------------
+ *  RESTRICTION: only element or tag names, without classes, ids (.,#)
+ */
+h1, h2, h3, h4, h5, h6, label,
+form, input, textarea,
+ul, ol, li, quote,
+div, span, code, hr{
+  margin:0;
+  padding:0;
+}
+
+ul, ol{
+  padding-left:20px;
+}
+
+
+fieldset{
+margin:8px 0px 16px 0px;
+padding:10px;
+}
+
+h1 {  font-size: 25px; font-weight:normal; padding-bottom:15px; }
+h2 {  font-size: 19px; font-weight:normal; padding-top:15px; padding-bottom:10px; }
+h3 {  font-size: 17px; font-weight:normal; padding-top:15px; padding-bottom:10px; }
+h4 {  font-size: 15px; font-weight:bold; padding-top:10px; padding-bottom:5px; }
+h5 {  font-size: 13px; font-weight:bold; padding-top:5px; padding-bottom:3px; }
+h6 {  font-size: 12px; font-weight:bold; padding-top:5px; padding-bottom:1px; }
+
+h1{
+	color:#fff;
+	-moz-text-shadow:    2px 1px 1px #60BCE9;
+  -webkit-text-shadow: 2px 1px 1px #60BCE9;
+  text-shadow: 2px 1px 1px #60BCE9;
+}
+
+h1.sub{
+	font-size:18px;
+	color:#567590;
+	padding-top:8px;
+	padding-bottom:6px;
+	-moz-text-shadow:    0px 0px 0px #60BCE9;
+  -webkit-text-shadow: 0px 0px 0px #60BCE9;
+  text-shadow: 0px 0px 0px #60BCE9;
+}
+
+h2{
+	color:#567590;
+}
+
+p {
+  margin: 0;
+  padding: 7px 0px 14px 0px;
+}
+
+a,
+a:link, a:visited {
+	text-decoration: none;
+	color: #006393;
+	outline:0px;
+}
+
+#content a,
+#content a:link,
+#content a:visited {
+	font-weight: bold;	
+}
+
+a:active,
+a:hover {
+TEXT-DECORATION: underline;
+color: #09F;
+}
+
+a img{
+	border:0px;
+}
+
+fieldset{
+  background-color:#F9f9f9;
+  padding:15px;
+  margin-bottom:20px;
+}
+
+fieldset legend{
+  background-color:#FFFFFF;
+  border:1px solid #888888;
+  padding:3px 5px;
+}
+
+table{
+  width:100%;
+  margin-bottom:15px;
+}
+
+table tr{
+  background-color:#E0EEF8;
+}
+
+table td{
+  padding:5px;
+	border:1px solid #BFDCEF;
+}
+
+table thead th{
+  padding:2px 0px 2px 5px;
+  background-color:#202B46;
+	color:#DDECF7;
+	border:1px solid #BFDCEF;
+}
+
+table caption{
+  font-size:17px;
+  font-weight:normal;
+  padding-bottom:5px;
+  text-align:left;
+}
+
+select{
+  border:1px solid #a6adb0;
+  background:#fff url(images/input-bg.gif) no-repeat top left;
+}
+
+textarea{
+  border:1px solid #a6adb0;
+  width:99%;
+  background:#fff url(images/input-bg.gif) no-repeat top left;
+}
+
+
+/*  -------------------------------------  ELEMENTS DEFAULT STYLE - @END ------------------------------
+ */
+
+
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+/*  --------------------------------------  COMMON CLASSES -  @START ----------------------------------
+ *  RESTRICTION: No ID-s here!!!
+ *               No 'only tagname' definitions here!!!
+ *  INFO: Here comes classes, which are used on many places, like a.active, h2.title, .block, .clear, etc.
+ *
+ */
+
+
+a.active {
+  color: #f68220;
+}
+
+input.form-text{
+  border:1px solid #a6adb0;
+  height:19px;
+  text-indent:5px;
+  font-size:12px;
+  padding-bottom:1px;
+  background:#fff url(images/input-bg.gif) no-repeat top left;
+}
+
+input.form-submit {
+  background-color:#FFFFFF;
+  border:2px solid #C7BBDC;
+  color:#EE7611;
+  cursor:pointer;
+  font-family:georgia;
+  font-size:12px;
+  font-weight:normal;
+  height:26px;
+  margin-top:7px;
+  padding:1px 5px 2px;
+}
+
+.clear{
+    clear:both;
+    height:0px;
+    overflow:hidden;
+    }
+
+li.leaf{
+  list-style-image:none;
+  list-style-type:none;
+}
+
+fieldset.collapsible{
+  padding:15px;
+}
+
+fieldset.collapsed{
+  padding:0px;
+}
+
+
+table tr.odd{
+  background-color:#f8f8f8;
+}
+
+table tr.even{
+  background-color:#fafafa;
+}
+
+html.js .resizable-textarea textarea,
+.resizable-textarea,
+.node-form input.form-text,
+.node-form textarea{
+  width:100%;
+}
+
+html.js fieldset.collapsed {
+  margin-bottom:20px;
+}
+
+ul.primary li a {
+  background-color:#eee;
+}
+
+
+div.messages{
+  background:#fff none repeat scroll 0 0;
+  color:#000;
+  padding:5px;
+  border:1px solid #000;
+  margin-bottom:15px;
+}
+
+div.error{
+  color:#cc0000;
+  font-weight:bold;
+  padding:10px;
+}
+
+
+div.field-label{
+  background-color:#F6F6F6;
+  margin:4px 0;
+  padding:5px;
+}
+
+div.field div.field-items{
+	padding:0px 0px 10px 5px;
+}
+
+div.field-name-field-lead{
+  font-weight:bold;
+  padding:10px 0px;
+}
+
+div.node div.links{
+	padding-top:20px;
+}
+
+form.node-form div.form-item-language{
+	float:none;
+	clear:both;
+}
+
+div.separator{
+	clear:both;
+	padding-bottom:20px;
+}
+/*  --------------------------------------  COMMON CLASSES -  @END ------------------------------------
+ */
+
+
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+/*  --------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @START -----------------------------
+ *  RESTRICTION: ONLY ID-s, and BODY tag!!! (#)
+ *  INFO: Page layout elements must have ID's.
+ *        Here comes elements like header, sidebars, content ,footer
+ */
+body {
+    background:#d4e3e8 none;
+    color:#567590;
+    font-family:Arial;
+    font-size:11px;
+    padding:0px;
+    margin:0px;
+    }
+
+#page-outer{
+	margin: 0px auto;
+	width:780px;
+  text-align:left;
+}
+
+#page-inner{
+    }
+
+#page_container{
+	padding:0px;
+	background:transparent url('images/page-container-bg.jpg') repeat-y top left;		
+}
+
+div.region-header{
+	float:left;
+}
+#header{
+  padding:0px;
+  border-bottom:0px dashed #ddd;
+	height:186px;
+	overflow:hidden;
+	background:transparent url('images/header-bg.jpg') no-repeat top left;
+}
+
+#sidebar-first{
+  width:150px;
+  float:left;
+	padding-bottom:30px;
+}
+
+#sidebar-second{
+  width:150px;
+  float:left;
+	padding-bottom:30px;
+}
+
+#content{
+  width:700px;
+  padding:0px 40px 30px 40px;
+	background-color:#bfdcef;	
+}
+
+body.two-sidebars #content{
+  width:400px;
+  float:left;
+}
+
+body.sidebar-first #content{
+  width:550px;
+  float:left;
+}
+
+body.sidebar-second #content{
+  width:550px;
+  float:left;
+}
+
+#footer{
+  clear:both;
+}
+/*  ---------------------------------  PAGE MAIN LAYOUT ELEMENTS -  @END ------------------------------
+ */
+
+
+
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+/*  --------------------------------  BLOCKS STYLE DEFINITIONS  -  @START -----------------------------
+ *  RESTRICTON: Group boxes, definitions by regions!!!
+ */
+
+/* ------------- -- HEADER REGION -- START ------------------------ */
+/* ------------- -- HEADER REGION -- START ------------------------ */
+
+#header #logo{
+  float:left;
+	padding:58px 0 0 3px;
+	width:147px;
+}
+
+
+#header #block-system-main-menu{
+  float:right;
+  font-size:15px;
+  padding:20px;
+}
+
+#header #block-system-main-menu ul.menu {
+    display: inline;
+    padding-left: 0;
+}
+
+#header #block-system-main-menu ul.menu li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 0.5em;
+}
+
+#header #block-locale-language{
+  background-color:#F7F3FD;
+  float:right;
+  font-size:10px;
+  line-height:12px;
+  padding:5px 10px 4px 0;
+}
+
+#header #block-locale-language ul li{
+  list-style:none;
+  padding:0px;
+}
+
+
+/* ------------- -- HEADER REGION -- END -------------------------- */
+
+
+/* ------------- -- LEFT-SIDEBAR REGION -- START ------------------ */
+/* ------------- -- LEFT-SIDEBAR REGION -- START ------------------ */
+
+#block-search-0 #edit-search-block-form-1-wrapper label{
+  display:none;
+}
+
+#block-search-0 #edit-search-block-form-1-wrapper{
+  float:left;
+  margin-top:7px;
+  padding-right:4px;
+  width:127px;
+}
+
+#block-search-0 input.form-text{
+  width:125px;
+}
+
+
+#block-search-0 input.form-submit{
+  margin-top:7px;
+  padding:0px 4px 1px;
+  height:22px;
+}
+
+#block-user-0 input.form-text{
+  width:100%;
+}
+
+#block-user-0 .form-item label {
+  font-weight:normal;
+  text-align:left;
+}
+
+#block-user-0 .item-list ul{
+  padding:6px 0px 0px 0px;
+}
+
+#block-user-0 .form-item {
+  margin:0px 0px 5px 0px;
+}
+
+#block-user-0 .item-list ul li {
+  list-style:none;
+  font-size:10px;
+  margin:0px;
+}
+
+#block-user-0 #user-login-form {
+  padding-top:5px;
+  text-align:left;
+}
+
+#block-user-0 input.form-submit{
+  height:23px;
+  padding:0 5px 2px;
+}
+
+#block-simplenews-1 #edit-mail-wrapper label{
+  font-weight:normal;
+}
+
+#block-simplenews-1 input.form-text{
+  width:100%;
+}
+
+#block-simplenews-1 #edit-mail-wrapper{
+  margin:0px;
+  padding-top:5px;
+}
+
+#block-simplenews-1 div.form-radios{
+  margin:0px;
+}
+
+
+
+/* ------------- -- LEFT-SIDEBAR REGION -- END -------------------- */
+
+/* ------------- -- RIGHT-SIDEBAR REGION -- START ----------------- */
+/* ------------- -- RIGHT-SIDEBAR REGION -- START ----------------- */
+
+/* ------------- -- RIGHT-SIDEBAR REGION -- END ------------------- */
+
+
+/* ------------- -- CONTENT REGION -- START ----------------------- */
+/* ------------- -- CONTENT REGION -- START ----------------------- */
+
+div.views-row{
+  padding:5px 0px;
+  border-bottom:0px dashed #e8e8e8;
+}
+
+div.views-field-title{
+  padding-bottom:4px;
+  font-weight:bold;
+  font-size:12px;
+}
+
+div.view-slider div.views-row{
+	padding:0px;
+	border:0px none;
+}
+
+div.view-slider div.views-row img{
+	display:block;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item{
+	float:left;
+	padding:4px 10px;
+	background:#eee;
+	border-right:1px solid #ddd;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item:last-child{
+	border:0px none;
+}
+
+div.view-slider div.views_slideshow_pager_field div.active{
+	cursor:pointer;
+	background:#ddd;
+}
+
+div.view-slider div.views_slideshow_pager_field div.views-slideshow-pager-field-item div.views-field-title{
+	padding:0px;
+	font-weight:normal;
+}
+
+div.field-name-field-photogallery div.field-item,
+div.views-field-field-photogallery{
+  float:left;
+}
+
+div.field-name-field-photogallery div.field-item img,
+div.views-field-field-photogallery img{
+  padding:0px 10px 5px 0px;
+}
+
+
+div.field-name-field-photogallery div.field-item,
+div.view-photogallery div.views-row{
+    background-color: #EEFAFF;
+    border-bottom: 0 dashed #E8E8E8;
+    box-shadow: 2px 2px 2px 0 #000000;
+    float: left;
+    height: 151px;
+    margin: 0 30px 30px 0;
+    padding: 7px;
+    text-align: center;
+    width: 145px;
+  -moz-box-shadow:    2px 2px 2px 0px #000000;
+  -webkit-box-shadow: 2px 2px 2px 0px #000000;
+  box-shadow:         2px 2px 2px 0px #000000;	
+}
+
+div.field-name-field-photogallery div.field-item{
+	height:auto;
+}
+
+div.field-name-field-photogallery div.field-item img{
+	padding:0px;
+	display:block;
+}
+
+div.view-photogallery div.views-row div.views-field-field-photogallery{
+  float:none;
+	padding:0px;
+}
+
+div.view-photogallery div.views-row div.views-field-field-photogallery img{
+	padding:0px;
+}
+
+div.view-photogallery div.views-row div.views-field-title{
+  padding-bottom:6px;
+  font-weight:normal;
+	text-align:center;
+  font-size:11px;
+}
+
+div.view-photogallery div.views-row div.views-field-title a{
+	font-weight:normal !important;
+}
+
+.float-right{
+  float:right;	
+  background-color: #EEFAFF;
+	padding: 7px;
+	text-align: center;
+	margin:0px 0px 15px 20px;
+  -moz-box-shadow:    2px 2px 2px 0px #000000;
+  -webkit-box-shadow: 2px 2px 2px 0px #000000;
+  box-shadow:         2px 2px 2px 0px #000000;	
+}
+
+#node-2 div.float-right,
+#node-12 div.float-right{
+	margin:11px 0px 15px 20px;
+}
+
+div.float-right object,
+div.float-right img{
+	display:block;
+}
+
+.float-left{
+  float:left;
+  padding:0px 15px 8px 0px;
+}
+
+.image-padding{
+  padding:19px 15px ;
+}
+
+div.node{
+	text-align:justify;
+}
+
+#node-46 div.float-right{
+	width: 145px;
+}
+
+#node-46 div.float-right div{
+	padding:0px 0px 6px;
+}
+
+#node-46 div.float-right img{
+	display:block;
+}
+
+
+div.rraister-submenu{
+	border-bottom: 1px solid #D4E3E8;
+	padding-bottom: 12px;
+}
+
+#sidebar-second div.sidebar-top{
+	height:174px;	
+	background:transparent url('images/right-top-bg.jpg') no-repeat top left;
+}
+
+#sidebar-second div.block{
+	padding:5px 9px 10px 15px;
+}
+
+#sidebar-first div.block{
+	padding:5px 15px 10px 9px;
+}
+
+#sidebar-first #block-block-2.block{
+	padding:5px 11px 10px 2px;
+}
+
+
+#sidebar-first #block-system-main-menu.block{
+	background:transparent url('images/left-bg.jpg') repeat-y top left;
+	border-bottom:1px solid #ccfb4e;
+	margin-bottom:10px;
+	padding:0px;
+}
+
+#sidebar-first  #block-system-main-menu div.content{
+	background:transparent url('images/menu-bg.jpg') no-repeat top left;
+	padding:5px 15px 10px 9px;
+}
+
+#block-system-main-menu ul {
+	padding:0px;
+	margin:0px;
+	margin-top:17px;
+}
+
+#block-system-main-menu ul li,
+#block-system-main-menu ul li.collapsed,
+#block-system-main-menu ul li.leaf {
+    background: url("images/menu-li-icon.jpg") no-repeat scroll right 4px transparent;
+    list-style: none outside none;
+    margin: 0 5px 0 0;
+    padding: 0 13px 0 0;
+    text-align: right;
+}
+
+#block-system-main-menu ul li a{
+	text-decoration:none;
+	color: #595C12;
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	font-size: 9px;
+	font-weight: bold;
+	margin-bottom: 2px;
+	text-transform:uppercase;
+}
+
+#block-system-main-menu ul li a:hover,
+#block-system-main-menu ul li a.active{
+	color:#000;
+}
+
+#block-system-main-menu ul ul{
+	margin:0px -10px 6px 0px;
+	padding:0px;
+}
+
+#block-system-main-menu ul ul li,
+#block-system-main-menu ul ul li.collapsed,
+#block-system-main-menu ul ul li.leaf {
+	margin:0px;
+	padding:0px 9px 0px 0px;
+  background: url("images/menu-li-icon-sub.jpg") no-repeat scroll right 6px transparent;	
+}
+
+#block-system-main-menu ul ul li a{
+	text-transform:none;
+}
+
+
+/* ------------- -- CONTENT REGION -- END ------------------------- */
+
+/* ------------- -- FOOTER REGION -- START ------------------------ */
+/* ------------- -- FOOTER REGION -- START ------------------------ */
+
+#footer{
+    background: url("images/footer-bg.gif") repeat-y scroll left top transparent;
+    font-size: 11px;
+    margin-bottom: 30px;
+    padding: 6px 187px 5px;
+		border-top:1px solid #d4e3e8;
+}
+div.copyright{
+	font-size:9px;
+	text-align:center;
+}
+div.madeby {
+	color: #33A700;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 9px;
+	padding-left:15px;
+}
+
+div.madeby a{
+  text-decoration:none;
+}
+
+
+#block-simplenews-1 h2{
+	padding:0px;
+	font-size:18px;
+	font-weight:bold;
+	color: white;
+	-moz-text-shadow:    2px 1px 1px #93d910;
+  -webkit-text-shadow: 2px 1px 1px #93d910;
+  text-shadow: 2px 1px 1px #93d910;	
+}
+
+#block-simplenews-1 div.form-item-mail label{
+	display:none;
+}
+
+
+#block-simplenews-1 div.form-item-mail{
+	float:left;
+	margin-top:3px;
+}
+
+#block-simplenews-1 div.form-item-mail input.form-text{
+	width:89px;
+	color: #49861c;
+	font-size:11px;
+	border: 1px solid #49861c;
+}
+
+#block-simplenews-1 input.form-submit{
+	background-color: #98ea00;
+	border: 1px solid #49861c;
+	color: #49861c;
+	cursor: pointer;
+	font-family: arial;
+	font-size: 11px;
+	font-weight: normal;
+	height: 22px;
+	margin-top:3px;
+	margin-left:3px;
+	padding: 1px 4px 0px;
+}
+
+/* ------------- -- FOOTER REGION -- END -------------------------- */
+
+
+/*  ---------------------------------  BLOCKS STYLE DEFINITIONS  -  @END ------------------------------
+ */

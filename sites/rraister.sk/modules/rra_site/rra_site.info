@@ -1,0 +1,6 @@
+; $Id.
+name = rra_site
+description = RRAISTER site functions
+core = 7.x
+tags[] = brainsum
+package = brainsum
